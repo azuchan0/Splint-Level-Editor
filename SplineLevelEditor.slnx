@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SplineLevelEditor.vcxproj" Id="83b4bcf1-19ec-4eb5-8f3e-bc5d35e57d55" />
+</Solution>

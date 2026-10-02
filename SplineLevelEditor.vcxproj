@@ -139,7 +139,30 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\core\App.cpp" />
+    <ClCompile Include="src\core\Camera.cpp" />
+    <ClCompile Include="src\editor\scene.cpp" />
+    <ClCompile Include="src\editor\ui.cpp" />
+    <ClCompile Include="src\gwafix\shader.cpp" />
+    <ClCompile Include="src\gwafix\vertexbuffer.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\math\Algorithm.cpp" />
+    <ClCompile Include="src\math\bezier.cpp" />
+    <ClCompile Include="src\math\bspline.cpp" />
+    <ClCompile Include="src\math\nurbs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\App.hpp" />
+    <ClInclude Include="src\core\Camera.hpp" />
+    <ClInclude Include="src\editor\scene.hpp" />
+    <ClInclude Include="src\editor\ui.hpp" />
+    <ClInclude Include="src\gwafix\shader.hpp" />
+    <ClInclude Include="src\gwafix\vertexbuffer.hpp" />
+    <ClInclude Include="src\math\Algorithm.hpp" />
+    <ClInclude Include="src\math\bezier.hpp" />
+    <ClInclude Include="src\math\bspline.hpp" />
+    <ClInclude Include="src\math\curve.hpp" />
+    <ClInclude Include="src\math\nurbs.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

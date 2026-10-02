@@ -15,10 +15,10 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath)
 
 	try {
 		vShaderFile.open(vertexPath);
-		fShaderFile.open(vertexPath);
+		fShaderFile.open(fragmentPath);
 		std::stringstream vShaderStream, fShaderStream;
 		vShaderStream << vShaderFile.rdbuf();
-		vShaderStream << vShaderFile.rdbuf();
+		fShaderStream << fShaderFile.rdbuf();
 		vShaderFile.close();
 		fShaderFile.close();
 		vertexCode = vShaderStream.str();
@@ -68,11 +68,11 @@ void Shader::unbind() const {
 	glUseProgram(0);
 }
 
-void Shader::setMat4(const std::string& name, glm::mat4& mat) const {
+void Shader::setMat4(const std::string& name, const glm::mat4& mat) const {
 	glUniformMatrix4fv(glGetUniformLocation(m_RendererID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }
 
-void Shader::setVec3(const std::string& name, glm::vec3& vec) const {
+void Shader::setVec3(const std::string& name, const glm::vec3& vec) const {
 	glUniform3fv(glGetUniformLocation(m_RendererID, name.c_str()), 1, glm::value_ptr(vec));
 }
 
